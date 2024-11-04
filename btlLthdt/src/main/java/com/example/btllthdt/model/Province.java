@@ -1,6 +1,6 @@
 package com.example.btllthdt.model;
 
-public class Provinder {
+public class Province {
     private int id;
     private String name;
 
@@ -8,6 +8,9 @@ public class Provinder {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

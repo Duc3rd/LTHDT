@@ -1,16 +1,21 @@
 package com.example.btllthdt.model;
 
+import java.sql.Date;
+
 public class student {
     private int id;
     private String name;
-    private String dob;
-    private int addressProvider;
-    private int provinder;
+    private Date dob;
+    private int addressProvince;
+    private int province;
 
     public int getId() {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -20,27 +25,27 @@ public class student {
         this.name = name;
     }
 
-    public String getDob() {
+    public Date getDob() {
         return dob;
     }
 
-    public void setDob(String dob) {
+    public void setDob(Date dob) {
         this.dob = dob;
     }
 
-    public int getAddressProvider() {
-        return addressProvider;
+    public int getAddressProvince() {
+        return addressProvince;
     }
 
-    public void setAddressProvider(int addressProvider) {
-        this.addressProvider = addressProvider;
+    public void setAddressProvince(int addressProvince) {
+        this.addressProvince = addressProvince;
     }
 
-    public int getProvinder() {
-        return provinder;
+    public int getProvince() {
+        return province;
     }
 
-    public void setProvinder(int provinder) {
-        this.provinder = provinder;
+    public void setProvince(int province) {
+        this.province = province;
     }
 }

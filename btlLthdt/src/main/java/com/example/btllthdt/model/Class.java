@@ -7,7 +7,7 @@ public class Class {
     private Date startDate;
     private Date endDate;
     private String name;
-    private String Description:
+    private String description; // Sửa từ 'Description' thành 'description'
 
     public int getId() {
         return id;
@@ -42,10 +42,9 @@ public class Class {
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
-}
