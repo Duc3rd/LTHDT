@@ -24,17 +24,17 @@ public class ProvinceDao {
         return conn;
     }
 
-    public void insertProvince(Province province) {
-        String SQL = "INSERT INTO provinces(id, name) VALUES(?, ?)";
-        try (Connection conn = connect();
-             PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-            pstmt.setInt(1, province.getId());
-            pstmt.setString(2, province.getName());
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-    }
+//    public void insertProvince(Province province) {
+//        String SQL = "INSERT INTO provinces(id, name) VALUES(?, ?)";
+//        try (Connection conn = connect();
+//             PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+//            pstmt.setInt(1, province.getId());
+//            pstmt.setString(2, province.getName());
+//            pstmt.executeUpdate();
+//        } catch (SQLException e) {
+//            System.out.println(e.getMessage());
+//        }
+//    }
 
     public List<Province> getAllProvinces() {
         List<Province> provinces = new ArrayList<>();

@@ -2,7 +2,6 @@ package com.example.btllthdt.service;
 
 import com.example.btllthdt.dao.ProvinceDao;
 import com.example.btllthdt.model.Province;
-
 import java.util.List;
 
 public class ProvinceService {
@@ -10,10 +9,6 @@ public class ProvinceService {
 
     public ProvinceService() {
         this.provinceDao = new ProvinceDao();
-    }
-
-    public void addProvince(Province province) {
-        provinceDao.insertProvince(province);
     }
 
     public List<Province> getAllProvinces() {

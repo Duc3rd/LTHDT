@@ -1,7 +1,7 @@
 package com.example.btllthdt.service;
 
 import com.example.btllthdt.dao.StudentDao;
-import com.example.btllthdt.model.student;
+import com.example.btllthdt.model.Student;
 
 import java.util.List;
 
@@ -12,19 +12,19 @@ public class StudentService {
         this.studentDao = new StudentDao();
     }
 
-    public void addStudent(student student) {
+    public void addStudent(Student student) {
         studentDao.insertStudent(student);
     }
 
-    public List<student> getAllStudents() {
+    public List<Student> getAllStudents() {
         return studentDao.getAllStudents();
     }
 
-    public List<student> getStudentsByProvince(int provinceId) {
+    public List<Student> getStudentsByProvince(int provinceId) {
         return studentDao.getStudentsByProvince(provinceId);
     }
 
-    public void updateStudent(student student) {
+    public void updateStudent(Student student) {
         studentDao.updateStudent(student);
     }
 

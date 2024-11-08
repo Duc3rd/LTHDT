@@ -2,7 +2,6 @@ package com.example.btllthdt.service;
 
 import com.example.btllthdt.dao.ClassDao;
 import com.example.btllthdt.model.Class;
-
 import java.util.List;
 
 public class ClassService {
@@ -12,9 +11,7 @@ public class ClassService {
         this.classDao = new ClassDao();
     }
 
-    public void addClass(Class course) {
-        classDao.insertClass(course);
+    public List<Class> getAllClasses() {
+        return classDao.getAllClasses();
     }
-
-    // Thêm các phương thức khác tương tự như trong StudentService
 }

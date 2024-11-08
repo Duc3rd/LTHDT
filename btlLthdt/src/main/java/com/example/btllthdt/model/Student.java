@@ -2,7 +2,7 @@ package com.example.btllthdt.model;
 
 import java.sql.Date;
 
-public class student {
+public class Student {
     private int id;
     private String name;
     private Date dob;
