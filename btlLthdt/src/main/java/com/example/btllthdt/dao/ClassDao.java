@@ -25,7 +25,7 @@ public class ClassDao {
 
     public List<Class> getAllClasses() {
         List<Class> classes = new ArrayList<>();
-        String SQL = "SELECT * FROM classes";
+        String SQL = "SELECT * FROM lthdtbtl.class";
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(SQL);
              ResultSet rs = pstmt.executeQuery()) {
@@ -46,7 +46,7 @@ public class ClassDao {
 
 
     public void insertClass(Class course) {
-        String SQL = "INSERT INTO class(id, startDate, endDate, name, description) VALUES(?, ?, ?, ?, ?)";
+        String SQL = "INSERT INTO lthdtbtl.class(id, start_date, end_date, name, description) VALUES(?, ?, ?, ?, ?)";
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(SQL)) {
             pstmt.setInt(1, course.getId());

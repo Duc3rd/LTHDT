@@ -7,7 +7,7 @@ public class Class {
     private Date startDate;
     private Date endDate;
     private String name;
-    private String description; // Sửa từ 'Description' thành 'description'
+    private String description;
 
     public int getId() {
         return id;

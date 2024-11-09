@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ProvinceDao {
     private Connection connect() {
-        String url = "jdbc:postgresql://localhost/postgres";
+        String url = "jdbc:postgresql://localhost:5432/postgres";
         String user = "postgres";
         String password = "Duc03082005";
         Connection conn = null;
@@ -38,7 +38,7 @@ public class ProvinceDao {
 
     public List<Province> getAllProvinces() {
         List<Province> provinces = new ArrayList<>();
-        String SQL = "SELECT * FROM provinces";
+        String SQL = "SELECT * FROM lthdtbtl.provinces";
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(SQL);
              ResultSet rs = pstmt.executeQuery()) {

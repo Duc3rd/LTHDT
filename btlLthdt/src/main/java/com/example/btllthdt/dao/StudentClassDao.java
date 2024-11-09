@@ -13,7 +13,7 @@ import java.util.List;
 
 public class StudentClassDao {
     private Connection connect() {
-        String url = "jdbc:postgresql://localhost/mydatabase";
+        String url = "jdbc:postgresql://localhost:5432/postgres";
         String user = "postgres";
         String password = "Duc03082005";
         Connection conn = null;
@@ -26,7 +26,7 @@ public class StudentClassDao {
     }
 
     public void registerForClass(StudentClass studentClass) {
-        String SQL = "INSERT INTO enrollment (student_id, class_id) VALUES (?, ?)";
+        String SQL = "INSERT INTO lthdtbtl.student_class (student_id, class_id) VALUES (?, ?)";
         Connection conn = null;
         PreparedStatement pstmt = null;
         try {
@@ -49,7 +49,7 @@ public class StudentClassDao {
 
     public List<StudentClass> getAllStudentClass() {
         List<StudentClass> resultList = new ArrayList<>();
-        String SQL = "SELECT * FROM studentClass";
+        String SQL = "SELECT * FROM lthdtbtl.student_class";
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;

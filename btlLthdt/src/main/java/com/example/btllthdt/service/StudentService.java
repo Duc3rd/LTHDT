@@ -21,7 +21,7 @@ public class StudentService {
     }
 
     public List<Student> getStudentsByProvince(int provinceId) {
-        return studentDao.getStudentsByProvince(provinceId);
+        return studentDao.getStudentsById(provinceId);
     }
 
     public void updateStudent(Student student) {
