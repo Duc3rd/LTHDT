@@ -21,7 +21,7 @@
         </padding>
 
 
-        <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Danh sách khoa" />
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Lịch sử khóa học" />
         <HBox prefHeight="43.0" prefWidth="587.0" spacing="10">
             <Button alignment="TOP_RIGHT" text="Tìm kiếm" />
             <TextField promptText="Tìm kiếm" />
@@ -33,8 +33,6 @@
             <columns>
                 <TableColumn fx:id="colStudentName" prefWidth="150.0" text="Tên sinh viên " />
                 <TableColumn fx:id="colStudentID" prefWidth="150.0" text="Mã sinh viên " />
-                <TableColumn fx:id="colStudentClass" text="Khóa học" prefWidth="100.0" />
-                <TableColumn fx:id="colStudentTime" text="Thời hạn" prefWidth="100.0" />
 
 
             </columns>

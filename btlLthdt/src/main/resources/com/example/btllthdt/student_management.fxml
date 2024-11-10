@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.center.controller.ManagementController">
+<HBox spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.btllthdt.controller.HelloController">
     <!-- Menu dọc bên trái -->
     <VBox alignment="TOP_LEFT" spacing="10.0" style="-fx-background-color: #1A1A2E; -fx-padding: 10;">
         <Button onAction="#onHome" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Trang chủ" />
@@ -41,8 +41,7 @@
             </columns>
         </TableView>
 
-        <!-- Phân trang cho danh sách học viên -->
-        <Pagination fx:id="pagination" currentPageIndex="0" onPageChange="#onPageChange" pageCount="1" prefHeight="110.0" prefWidth="574.0" />
+
 
     </VBox>
 </HBox>
