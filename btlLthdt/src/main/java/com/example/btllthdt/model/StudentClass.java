@@ -4,6 +4,14 @@ public class StudentClass {
     private int studentId;
     private int classId;
 
+    public StudentClass(int studentId, int classId) {
+        this.studentId = studentId;
+        this.classId = classId;
+    }
+
+    public StudentClass() {
+    }
+
     public int getStudentId() {
         return studentId;
     }

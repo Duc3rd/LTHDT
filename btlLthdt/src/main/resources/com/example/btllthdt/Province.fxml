@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.btllthdt.controller.ProvinceController">
+
+
+
+    <!-- Menu dọc bên trái -->
+    <left>
+        <VBox alignment="TOP_LEFT" spacing="10.0" style="-fx-background-color: #1A1A2E; -fx-padding: 10;">
+            <Button text="Trang chủ" onAction="#onHome" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button text="Quản lý học viên" onAction="#onManageStudents" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button text="Quản lý khóa học" onAction="#onManageCourses" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button text="Quản lý tỉnh thành" onAction="#onProvinceManagent" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button text="Quản lý khóa học, sinh viên" onAction="#onStudentClassManagent" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button text="Quản lý chứng chỉ" onAction="#onCertifiManagent" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+        </VBox>
+    </left>
+
+    <!-- Nội dung chính -->
+    <center>
+        <VBox alignment="CENTER" spacing="10.0">
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+
+            <!-- Tiêu đề chính -->
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Danh sách Tỉnh/Thành phố" />
+
+            <!-- Tìm kiếm và hiển thị bảng -->
+            <HBox spacing="10">
+                <TextField fx:id="searchField" promptText="Tìm kiếm tỉnh/thành phố" />
+                <Button onAction="#onSearchProvince" text="Tìm kiếm" />
+            </HBox>
+
+            <!-- Bảng hiển thị danh sách tỉnh -->
+            <TableView fx:id="provinceTable" prefHeight="409.0" prefWidth="646.0">
+                <columns>
+                    <TableColumn fx:id="colProvinceId" prefWidth="150.0" text="Mã Tỉnh" />
+                    <TableColumn fx:id="colProvinceName" prefWidth="300.0" text="Tên Tỉnh/Thành phố" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+
+
+</BorderPane>

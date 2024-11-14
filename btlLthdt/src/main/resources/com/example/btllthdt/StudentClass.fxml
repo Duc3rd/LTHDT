@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.btllthdt.controller.StudentClassController">
+
+    <!-- Menu bên trái (tùy chọn) -->
+    <left>
+        <VBox alignment="TOP_LEFT" spacing="10.0" style="-fx-background-color: #1A1A2E; -fx-padding: 10;">
+            <Button text="Trang chủ" onAction="#onHome" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button text="Quản lý học viên" onAction="#onManageStudents" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button text="Quản lý khóa học" onAction="#onManageCourses" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button text="Quản lý tỉnh thành" onAction="#onProvinceManagent" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button text="Quản lý khóa học, sinh viên" onAction="#onStudentClassManagent" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+            <Button text="Quản lý chứng chỉ" onAction="#onCertifiManagent" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+        </VBox>
+    </left>
+
+    <!-- Nội dung chính -->
+    <center>
+        <VBox alignment="CENTER" spacing="10.0">
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+
+            <!-- Tiêu đề -->
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Danh sách Lớp học Sinh viên" />
+
+            <!-- Tìm kiếm -->
+            <HBox spacing="10">
+                <TextField fx:id="searchField" promptText="Tìm kiếm Sinh viên hoặc Lớp học" />
+                <Button onAction="#onSearchStudentClass" text="Tìm kiếm" />
+            </HBox>
+
+            <!-- Bảng Danh sách Lớp học Sinh viên -->
+            <TableView fx:id="studentClassTable" prefHeight="409.0" prefWidth="646.0">
+                <columns>
+                    <TableColumn fx:id="colStudentId" text="Mã Sinh Viên" />
+                    <TableColumn fx:id="colClassId" text="Mã Lớp" />
+                </columns>
+            </TableView>
+
+            <!-- Thêm mới Sinh viên vào lớp -->
+            <HBox spacing="10">
+                <ComboBox fx:id="studentComboBox" promptText="Chọn Sinh Viên" />
+                <ComboBox fx:id="classComboBox" promptText="Chọn Lớp học" />
+                <Button onAction="#onAddStudentClass" text="Thêm Sinh Viên vào Lớp" />
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

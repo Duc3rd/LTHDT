@@ -4,14 +4,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.btllthdt.controller.HelloController">
+<HBox spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.btllthdt.controller.StudentController">
     <!-- Menu dọc bên trái -->
     <VBox alignment="TOP_LEFT" spacing="10.0" style="-fx-background-color: #1A1A2E; -fx-padding: 10;">
         <Button text="Trang chủ" onAction="#onHome" style="-fx-background-color: transparent; -fx-text-fill: white;" />
         <Button text="Quản lý học viên" onAction="#onManageStudents" style="-fx-background-color: transparent; -fx-text-fill: white;" />
         <Button text="Quản lý khóa học" onAction="#onManageCourses" style="-fx-background-color: transparent; -fx-text-fill: white;" />
-        <Button text="Quản lý học phí" onAction="#onStatistics" style="-fx-background-color: transparent; -fx-text-fill: white;" />
-        <Button text="Lịch sử khóa học" onAction="#onLogout" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+        <Button text="Quản lý tỉnh thành" onAction="#onProvinceManagent" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+        <Button text="Quản lý khóa học, sinh viên" onAction="#onStudentClassManagent" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+        <Button text="Quản lý chứng chỉ" onAction="#onCertifiManagent" style="-fx-background-color: transparent; -fx-text-fill: white;" />
     </VBox>
 
     <!-- Nội dung chính -->
@@ -25,29 +26,33 @@
 
         <!-- Form nhập và chỉnh sửa thông tin học viên -->
         <HBox spacing="10.0" alignment="CENTER">
-            <Label text="Tên sinh viên:" />
-            <TextField fx:id="studentName" promptText="Nhập tên sinh viên" />
-
             <Label text="Mã sinh viên:" />
             <TextField fx:id="studentID" promptText="Nhập mã sinh viên" />
 
-            <Label text="Khóa học:" />
-            <TextField fx:id="studentClass" promptText="Nhập khóa học" />
+            <Label text="Tên sinh viên:" />
+            <TextField fx:id="studentName" promptText="Nhập tên sinh viên" />
         </HBox>
 
-        <!-- Ngày sinh và quê quán trên cùng một dòng -->
+        <!-- Ngày sinh và tỉnh/thành phố -->
         <HBox spacing="10.0" alignment="CENTER">
             <Label text="Ngày sinh:" />
             <DatePicker fx:id="studentDob" />
 
-            <Label text="Quê quán:" />
-            <TextField fx:id="studentHometown" promptText="Nhập quê quán" />
+            <Label text="Tỉnh/Thành phố:" />
+            <TextField fx:id="studentProvince" promptText="Nhập tỉnh thành phố" />
         </HBox>
 
-        <!-- Button thêm và sửa học viên -->
+        <!-- Address Province -->
+        <HBox spacing="10.0" alignment="CENTER">
+            <Label text="Địa chỉ tỉnh:" />
+            <TextField fx:id="studentAddressProvince" promptText="Nhập tỉnh địa chỉ" />
+        </HBox>
+
+        <!-- Button thêm, sửa và xóa học viên -->
         <HBox spacing="10.0" alignment="CENTER">
             <Button text="Thêm học viên" onAction="#onAddStudent" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
-            <Button text="Sửa học viên" onAction="#onEditStudent" style="-fx-background-color: #FFC107; -fx-text-fill: white;" />
+            <Button text="Sửa học viên" onAction="#onUpdateStudent" style="-fx-background-color: #FF9800; -fx-text-fill: white;" />
+            <Button text="Xóa học viên" onAction="#onDeleteStudent" style="-fx-background-color: #F44336; -fx-text-fill: white;" />
         </HBox>
 
         <!-- Tìm kiếm học viên -->
@@ -57,18 +62,15 @@
             <Button text="Tìm kiếm" onAction="#onSearchStudent" />
         </HBox>
 
-        <!-- Hiển thị danh sách học viên với phân trang -->
-        <TableView fx:id="studentTable" prefHeight="200.0" prefWidth="400.0">
+        <!-- Hiển thị danh sách học viên -->
+        <TableView fx:id="studentTable" onMouseClicked="#onTableClick">
             <columns>
-                <TableColumn fx:id="colStudentName" text="Tên học viên" prefWidth="150.0" />
-                <TableColumn fx:id="colStudentID" text="Mã học viên" prefWidth="150.0" />
-                <TableColumn fx:id="colStudentClass" text="Khóa học" prefWidth="100.0" />
-                <TableColumn fx:id="colStudentDob" text="Ngày sinh" prefWidth="150.0" />
-                <TableColumn fx:id="colStudentHometown" text="Quê quán" prefWidth="150.0" />
+                <TableColumn fx:id="colStudentID" text="ID"/>
+                <TableColumn fx:id="colStudentName" text="Name"/>
+                <TableColumn fx:id="colStudentDob" text="Date of Birth"/>
+                <TableColumn fx:id="colAddressProvince" text="Address Province"/>
+                <TableColumn fx:id="colProvince" text="Province"/>
             </columns>
         </TableView>
-
-
-
     </VBox>
 </HBox>

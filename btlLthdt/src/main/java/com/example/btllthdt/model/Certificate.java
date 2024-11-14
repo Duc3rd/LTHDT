@@ -6,6 +6,16 @@ public class Certificate {
     private int classId;
     private String status;
 
+    public Certificate(int id, int studentId, int classId, String status) {
+        this.id = id;
+        this.studentId = studentId;
+        this.classId = classId;
+        this.status = status;
+    }
+
+    public Certificate() {
+    }
+
     public int getId() {
         return id;
     }
