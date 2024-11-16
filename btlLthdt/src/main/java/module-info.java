@@ -8,4 +8,5 @@ module com.example.btllthdt {
     exports com.example.btllthdt;
     exports com.example.btllthdt.controller;
     opens com.example.btllthdt.controller to javafx.fxml;
+    opens com.example.btllthdt.model to javafx.graphics, javafx.fxml, javafx.base;
 }
