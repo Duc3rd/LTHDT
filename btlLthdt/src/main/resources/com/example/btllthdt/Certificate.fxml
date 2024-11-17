@@ -52,9 +52,9 @@
                 <ComboBox fx:id="statusComboBox" promptText="Trạng Thái">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="Completed" />
-                            <String fx:value="In Progress" />
-                            <String fx:value="Not Started" />
+                            <String fx:value="Đạt" />
+                            <String fx:value="Không đạt" />
+
                         </FXCollections>
                     </items>
                 </ComboBox>

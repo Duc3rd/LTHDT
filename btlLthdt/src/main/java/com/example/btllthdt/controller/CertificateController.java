@@ -75,8 +75,8 @@ public class CertificateController {
             clearForm();
             showAlert("Thành công", "Thêm chứng chỉ thành công");
 
-        } catch (NumberFormatException e) {
-            showAlert("Lỗi", "Vui lòng nhập đúng định dạng số cho Mã Sinh Viên và Mã Lớp");
+        } catch (Exception e) {
+            showAlert("Lỗi", e.getMessage());
         }
     }
 

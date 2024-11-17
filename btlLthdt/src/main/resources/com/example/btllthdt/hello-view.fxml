@@ -39,7 +39,7 @@
             <DatePicker fx:id="studentDob" />
 
             <Label text="Tỉnh/Thành phố:" />
-            <TextField fx:id="studentProvince" promptText="Nhập tỉnh thành phố" />
+            <ComboBox fx:id="studentProvinceCombo" promptText="Chọn tỉnh thành phố" />
         </HBox>
 
         <!-- Address Province -->
