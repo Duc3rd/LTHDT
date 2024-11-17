@@ -154,7 +154,7 @@ public class StudentController {
             Province selectedProvince = studentProvinceCombo.getValue();
 
 
-            if (selectedProvince == null) {
+                if (selectedProvince == null) {
                 showAlert("Error", "Vui lòng chọn tỉnh/thành phố.");
                 return;
             }
